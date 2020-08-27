@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 
-source ./lib/lib.sh
+source ../lib/lib.sh
 
 aurPackages=(
     brave-bin

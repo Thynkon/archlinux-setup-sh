@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./lib/lib.sh
+source ../lib/lib.sh
 
 setupNeovim() {
     #source ./lib/lib.sh
