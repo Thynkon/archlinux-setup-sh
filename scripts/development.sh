@@ -10,6 +10,7 @@ archPackages=(
     clang
     composer
     gcc
+    gitahead
     jdk11-openjdk
     luarocks
     maven

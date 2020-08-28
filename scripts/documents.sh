@@ -4,12 +4,12 @@
 source ../lib/lib.sh
 
 aurPackages=(
-    brave-bin
 )
 
 archPackages=(
-    firefox-developer-edition
-    w3m
+    gscan2pdf
+    libreoffice-fresh
+    xreader
 )
 
 installAurPackages "${aurPackages[@]}"

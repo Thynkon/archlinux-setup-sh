@@ -4,12 +4,14 @@
 source ../lib/lib.sh
 
 aurPackages=(
-    brave-bin
 )
 
 archPackages=(
-    firefox-developer-edition
-    w3m
+    gimp
+    imagemagick
+    inkscape
+    nomacs
+    vlc
 )
 
 installAurPackages "${aurPackages[@]}"

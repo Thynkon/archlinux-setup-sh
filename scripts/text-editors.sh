@@ -39,6 +39,7 @@ installVscodiumExtensions() {
 }
 
 aurPackages=(
+    joplin-appimage
     vscodium-bin
 )
 

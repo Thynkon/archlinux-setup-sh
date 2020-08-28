@@ -4,12 +4,11 @@
 source ../lib/lib.sh
 
 aurPackages=(
-    brave-bin
 )
 
 archPackages=(
-    firefox-developer-edition
-    w3m
+    downgrade
+    pamac-aur
 )
 
 installAurPackages "${aurPackages[@]}"
