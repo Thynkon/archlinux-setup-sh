@@ -4,26 +4,27 @@
 source ../lib/lib.sh
 
 aurPackages=(
+    compton-tryone-git
 )
 
 archPackages=(
     alacritty
     arandr
-    arcolinux-awesome-git
+    arc-gtk-theme
     arcolinux-awesome-dconf-git
+    arcolinux-awesome-git
     arcolinux-bin-git
     arcolinux-config-awesome-git
     arcolinux-hblock-git
-    arcolinux-local-xfce4-git
     arcolinux-lightdm-gtk-greeter
     arcolinux-lightdm-gtk-greeter-settings
+    arcolinux-local-xfce4-git
     arcolinux-logout-git
     arcolinux-root-git
     arcolinux-tweak-tool-git
     arcolinux-variety-git
-    arcolinux-xfce-git
     arcolinux-wallpapers-git
-    arc-gtk-theme
+    arcolinux-xfce-git
     awesome
     feh
     gnome-keyring
@@ -33,7 +34,6 @@ archPackages=(
     lightdm
     lxappearance
     lxrandr
-    picom
     redshift
     safeeyes
     seahorse
@@ -42,8 +42,8 @@ archPackages=(
     thunar-volman
     variety
     vicious
-    xfce4-power-manager
     xfce4-notifyd
+    xfce4-power-manager
     xfce4-settings
 )
 
