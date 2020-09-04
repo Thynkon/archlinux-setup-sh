@@ -13,6 +13,8 @@ archPackages=(
     gitahead
     jdk11-openjdk
     luarocks
+    cmake
+    make
     maven
     nginx
     nodejs
