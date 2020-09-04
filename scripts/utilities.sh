@@ -4,29 +4,35 @@
 source ../lib/lib.sh
 
 aurPackages=(
+    dust-bin
+    vifmimg-git
 )
 
 archPackages=(
+    cronie
     dconf-editor
     dmenu
+    etcher-bin
+    fd
     flameshot
     fzf
     lsd
     lsof
     neofetch
-    nmap
     ntfs-3g
-    p7zip
     peek
     qbittorrent
     ripgrep
     rofi
     sharutils
+    timeshift
+    tree
     udiskie
-    unzip
     uudeview
-    zip
 )
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
+
+# Periodic TRIM (SSD long-term performance)
+sudo systemctl enable --now fstrim.timer
