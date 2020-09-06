@@ -5,6 +5,7 @@ source ../lib/lib.sh
 
 aurPackages=(
     dust-bin
+    pick-colour-picker
     vifmimg-git
 )
 
