@@ -3,7 +3,8 @@
 source ../lib/lib.sh
 
 setupNeovim() {
-    #source ./lib/lib.sh
+    source ../lib/lib.sh
+
     commandExists nvim
     if [[ $? -eq 0 ]]; then
 	curl -fLo "${HOME}"/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -47,8 +48,8 @@ archPackages=(
     neovim
 )
 
-#installAurPackages "${aurPackages[@]}"
-#installVscodiumExtensions
+installAurPackages "${aurPackages[@]}"
+installVscodiumExtensions
 
 installArchPackages "${archPackages[@]}"
 su "thynkon" -c "bash -c setupNeovim"
