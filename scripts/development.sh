@@ -8,12 +8,13 @@ aurPackages=(
 
 archPackages=(
     clang
+    cmake
     composer
+    dbeaver
     gcc
     gitahead
     jdk11-openjdk
     luarocks
-    cmake
     make
     maven
     nginx
