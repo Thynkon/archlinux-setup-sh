@@ -12,7 +12,6 @@ archPackages=(
     arandr
     arc-gtk-theme
     arcolinux-awesome-dconf-git
-    arcolinux-awesome-git
     arcolinux-bin-git
     arcolinux-config-awesome-git
     arcolinux-hblock-git
@@ -21,8 +20,8 @@ archPackages=(
     arcolinux-local-xfce4-git
     arcolinux-logout-git
     arcolinux-root-git
+    arcolinux-systemd-services-git
     arcolinux-tweak-tool-git
-    arcolinux-variety-git
     arcolinux-wallpapers-git
     arcolinux-xfce-git
     awesome
