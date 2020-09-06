@@ -10,6 +10,8 @@ archPackages=(
     gscan2pdf
     libreoffice-fresh
     xreader
+    zathura
+    zathura-pdf-poppler
 )
 
 installAurPackages "${aurPackages[@]}"
