@@ -4,9 +4,11 @@
 source ./lib/lib.sh
 
 aurPackages=(
+    android-studio
 )
 
 archPackages=(
+    android-tools
     clang
     cmake
     composer
