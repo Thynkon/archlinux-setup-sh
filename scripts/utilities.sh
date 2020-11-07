@@ -7,16 +7,21 @@ aurPackages=(
     dust-bin
     pick-colour-picker
     vifmimg-git
+    zoxide
 )
 
 archPackages=(
+    bat
     cronie
+    ctags
     dconf-editor
     dmenu
     etcher-bin
     fd
     flameshot
     fzf
+    grub-customizer
+    htop
     lsd
     lsof
     neofetch

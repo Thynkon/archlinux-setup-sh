@@ -4,7 +4,7 @@
 source ../lib/lib.sh
 
 aurPackages=(
-    compton-tryone-git
+    lightdm-webkit-theme-aether
 )
 
 archPackages=(
@@ -12,7 +12,6 @@ archPackages=(
     arandr
     arc-gtk-theme
     arcolinux-awesome-dconf-git
-    arcolinux-bin-git
     arcolinux-config-awesome-git
     arcolinux-hblock-git
     arcolinux-lightdm-gtk-greeter
@@ -25,6 +24,7 @@ archPackages=(
     arcolinux-wallpapers-git
     arcolinux-xfce-git
     awesome
+    bspwm
     feh
     gnome-keyring
     gtk-engine-murrine
@@ -33,9 +33,11 @@ archPackages=(
     lightdm
     lxappearance
     lxrandr
+    picom
     redshift
     safeeyes
     seahorse
+    sxhkd
     thunar
     thunar-archive-plugin
     thunar-volman

@@ -41,11 +41,11 @@ installVscodiumExtensions() {
 
 aurPackages=(
     joplin-appimage
+    neovim-git
     vscodium-bin
 )
 
 archPackages=(
-    neovim
 )
 
 installAurPackages "${aurPackages[@]}"

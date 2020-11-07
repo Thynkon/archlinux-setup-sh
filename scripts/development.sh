@@ -16,6 +16,7 @@ archPackages=(
     gcc
     gitahead
     jdk11-openjdk
+    jq
     luarocks
     make
     maven
