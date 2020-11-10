@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 
-source ../lib/lib.sh
+source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 
 aurPackages=(
     android-studio

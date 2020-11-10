@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 
-source ../lib/lib.sh
+source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 
 aurPackages=(
     lightdm-webkit-theme-aether
@@ -25,6 +25,7 @@ archPackages=(
     arcolinux-xfce-git
     awesome
     bspwm
+    dunst
     feh
     gnome-keyring
     gtk-engine-murrine
