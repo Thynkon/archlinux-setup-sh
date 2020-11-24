@@ -6,22 +6,28 @@ source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 aurPackages=(
     dust-bin
     pick-colour-picker
+    timeshift
     vifmimg-git
     zoxide
 )
 
 archPackages=(
     bat
+    btrfs-progs
+    chezmoi
     cronie
     ctags
     dconf-editor
     dmenu
-    etcher-bin
+    dosfstools
+    e2fsprogs
+    exfat-utils
     fd
     flameshot
     fzf
     grub-customizer
     htop
+    jq
     lsd
     lsof
     neofetch
@@ -31,7 +37,6 @@ archPackages=(
     ripgrep
     rofi
     sharutils
-    timeshift
     tree
     udiskie
     uudeview

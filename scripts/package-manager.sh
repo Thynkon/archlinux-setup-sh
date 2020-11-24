@@ -1,15 +1,22 @@
 #!/usr/bin/env bash
 #set -e
 
-source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+install_yay() {
+    local REPO_URL="https://aur.archlinux.org/yay.git"
+    local YAY_DIRECTORY="${HOME}/programming/yay"
 
-aurPackages=(
-)
+    [ -d "${YAY_DIRECTORY}" ] || mkdir -p "${YAY_DIRECTORY}"
+    cd "${YAY_DIRECTORY}"
+
+    makepkg -si
+}
 
 archPackages=(
-    downgrade
-    pamac-aur
+    base-devel
 )
 
-installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
+install_yay
+
+# enable pacman and yay colors
+sudo sed -i -r "s/^#(.*)Color$/Color/g" /etc/pacman.conf

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # set -e
-set -x
+# set -x
 
 source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 

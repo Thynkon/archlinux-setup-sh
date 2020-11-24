@@ -12,7 +12,6 @@ aurPackages=(
 )
 
 archPackages=(
-    arcolinux-fonts-git
     awesome-terminal-fonts
     adobe-source-sans-pro-fonts
     cantarell-fonts

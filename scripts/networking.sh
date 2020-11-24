@@ -9,9 +9,14 @@ aurPackages=(
 
 archPackages=(
     curl
+    inetutils # hostname
+    iproute2
+    networkmanager
     nmap
     wget
 )
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
+
+sudo systemctl enable NetworkManager

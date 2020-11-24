@@ -5,6 +5,7 @@ source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 
 aurPackages=(
     android-studio
+    gitahead
 )
 
 archPackages=(
@@ -14,7 +15,6 @@ archPackages=(
     composer
     dbeaver
     gcc
-    gitahead
     jdk11-openjdk
     jq
     luarocks
