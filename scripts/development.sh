@@ -25,17 +25,10 @@ archPackages=(
     npm
     python
     python-pip
+    rustup
     valgrind
     yarn
 )
-
-# Rust
-commandExists rustup
-if [[ $? -eq 0 ]]; then
-    curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
-else
-    echo "rustup is already installed"
-fi
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
