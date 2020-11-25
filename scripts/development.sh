@@ -15,6 +15,7 @@ archPackages=(
     composer
     dbeaver
     gcc
+    go
     jdk11-openjdk
     jq
     luarocks
