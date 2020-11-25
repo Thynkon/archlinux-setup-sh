@@ -13,11 +13,11 @@ aurPackages=(
 
 archPackages=(
     awesome-terminal-fonts
-    adobe-source-sans-pro-fonts
     cantarell-fonts
     noto-fonts
     otf-hermit
     tamsyn-font
+    terminus-font
     ttf-bitstream-vera
     ttf-dejavu
     ttf-droid

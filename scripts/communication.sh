@@ -4,6 +4,7 @@
 source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 
 aurPackages=(
+    newsflash
 )
 
 archPackages=(
