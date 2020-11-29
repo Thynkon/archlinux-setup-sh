@@ -2,7 +2,7 @@
 # set -e
 # set -x
 
-source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 setup_powertop() {
     local powertop_unit_file="/etc/systemd/system/powertop.service"

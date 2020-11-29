@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 
-source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 aurPackages=(
     bibata-cursor-theme
@@ -25,6 +25,7 @@ archPackages=(
     lxappearance
     lxrandr
     numlockx
+    polkit-gnome
     picom
     redshift
     seahorse

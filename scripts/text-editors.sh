@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 setupNeovim() {
-    source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+    source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
     commandExists nvim
     if [[ $? -eq 0 ]]; then

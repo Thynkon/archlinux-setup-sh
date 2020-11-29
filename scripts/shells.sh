@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 
-source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 GITHUB_HTTPS="https://github.com"
 OH_MY_ZSH_DIR="$HOME/.config/oh-my-zsh"
