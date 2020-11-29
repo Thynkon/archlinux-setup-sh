@@ -4,6 +4,7 @@
 source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
 
 aurPackages=(
+    bibata-cursor-theme
     lightdm-webkit-theme-aether
     polybar
     safeeyes
@@ -13,6 +14,7 @@ archPackages=(
     alacritty
     arandr
     arc-gtk-theme
+    arc-icon-theme
     awesome
     bspwm
     dunst
@@ -22,6 +24,7 @@ archPackages=(
     lightdm
     lxappearance
     lxrandr
+    numlockx
     picom
     redshift
     seahorse

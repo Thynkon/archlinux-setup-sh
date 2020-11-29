@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #set -e
 
+source "${HOME}/programming/arcolinux-setup/lib/lib.sh"
+
+PACMAN_CONF="/etc/pacman.conf"
+
 install_yay() {
     local REPO_URL="https://aur.archlinux.org/yay.git"
     local YAY_DIRECTORY="${HOME}/programming/yay"
@@ -11,12 +15,27 @@ install_yay() {
     makepkg -si
 }
 
+enable_colors() {
+    grep "^#(.*)Color$" "${PACMAN_CONF}" &&
+	# enable pacman and yay colors
+	sudo sed -i -r "s/^#(.*)Color$/Color/g" "${PACMAN_CONF}"
+}
+
 archPackages=(
     base-devel
+    pacman-contrib
+    pkgfile # command-not-found
+    reflector # find fastest mirror
 )
 
 installArchPackages "${archPackages[@]}"
 install_yay
 
-# enable pacman and yay colors
-sudo sed -i -r "s/^#(.*)Color$/Color/g" /etc/pacman.conf
+sudo pkgfile --update
+
+# get fastest mirror
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist
+
+enable_colors
+
+ exit 0

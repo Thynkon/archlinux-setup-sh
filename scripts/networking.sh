@@ -11,6 +11,7 @@ archPackages=(
     curl
     inetutils # hostname
     iproute2
+    network-manager-applet
     networkmanager
     nmap
     wget
