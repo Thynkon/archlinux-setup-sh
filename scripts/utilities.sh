@@ -40,6 +40,7 @@ archPackages=(
     tree
     udiskie
     uudeview
+    xsel
 )
 
 installAurPackages "${aurPackages[@]}"

@@ -21,12 +21,13 @@ archPackages=(
     feh
     gnome-keyring
     gtk-engine-murrine
+    gvfs-mtp # android file transfer
     lightdm
     lxappearance
     lxrandr
     numlockx
-    polkit-gnome
     picom
+    polkit-gnome
     redshift
     seahorse
     sxhkd

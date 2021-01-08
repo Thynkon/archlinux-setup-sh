@@ -7,8 +7,8 @@ setupNeovim() {
 
     commandExists nvim
     if [[ $? -eq 0 ]]; then
-	curl -fLo "${HOME}"/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	git clone https://github.com/wbthomason/packer.nvim\
+	     ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
     else
 	echo "neovim is already installed"
     fi
@@ -43,9 +43,22 @@ aurPackages=(
     joplin-appimage
     neovim-git
     vscodium-bin
+
+    # lsp servers
+    lua-language-server-git
+    nodejs-intelephense
+    sql-language-server
+    texlab-git
+    vscode-css-languageserver-bin
+    vscode-html-languageserver-bin
+    vscode-json-languageserver-bin
 )
 
 archPackages=(
+    # lsp servers
+    bash-language-server
+    gopls
+    python-language-server
 )
 
 installAurPackages "${aurPackages[@]}"

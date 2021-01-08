@@ -14,6 +14,7 @@ archPackages=(
     cmake
     composer
     dbeaver
+    deno
     gcc
     go
     jdk11-openjdk
@@ -26,6 +27,7 @@ archPackages=(
     npm
     python
     python-pip
+    ruby
     rustup
     valgrind
     yarn
