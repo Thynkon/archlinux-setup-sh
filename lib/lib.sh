@@ -5,7 +5,7 @@ installArchPackages() {
 }
 
 installAurPackages() {
-    yay -S $@
+    paru -S $@
 }
 
 commandExists() {

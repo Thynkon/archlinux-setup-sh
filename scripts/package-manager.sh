@@ -5,12 +5,20 @@ source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 PACMAN_CONF="/etc/pacman.conf"
 
-install_yay() {
-    local REPO_URL="https://aur.archlinux.org/yay.git"
-    local YAY_DIRECTORY="${HOME}/programming/yay"
+install_aur_helper() {
+    local repo_url=""
 
-    [ -d "${YAY_DIRECTORY}" ] || mkdir -p "${YAY_DIRECTORY}"
-    cd "${YAY_DIRECTORY}"
+    if [ "${AUR_HELPER}" != "paru" || "${AUR_HELPER}" != "yay" ]; then
+	echo "Invalid aur helper: ${AUR_HELPER}"
+	echo "Exiting..."
+	exit 1
+    fi
+
+    repo_url="https://aur.archlinux.org/${AUR_HELPER}.git"
+    local AUR_HELPER_DIRECTORY="${HOME}/programming/${AUR_HELPER}"
+
+    [ -d "${AUR_HELPER_DIRECTORY}" ] || mkdir -p "${AUR_HELPER_DIRECTORY}"
+    cd "${AUR_HELPER_DIRECTORY}"
 
     makepkg -si
 }
@@ -28,8 +36,10 @@ archPackages=(
     reflector # find fastest mirror
 )
 
+AUR_HELPER="paru"
+
 installArchPackages "${archPackages[@]}"
-install_yay
+install_aur_helper
 
 sudo pkgfile --update
 
