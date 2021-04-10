@@ -21,6 +21,8 @@ archPackages=(
     jq
     luarocks
     make
+    mariadb
+    mariadb-clients
     maven
     nginx
     nodejs

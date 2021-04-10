@@ -12,6 +12,7 @@ aurPackages=(
 )
 
 archPackages=(
+    android-file-transfer
     bat
     btrfs-progs
     chezmoi

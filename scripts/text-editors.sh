@@ -48,17 +48,18 @@ aurPackages=(
     lua-language-server-git
     nodejs-intelephense
     sql-language-server
-    texlab-git
     vscode-css-languageserver-bin
     vscode-html-languageserver-bin
-    vscode-json-languageserver-bin
+    vscode-json-languageserver
 )
 
 archPackages=(
     # lsp servers
     bash-language-server
+    texlab
     gopls
     python-language-server
+    rust-analyzer
 )
 
 installAurPackages "${aurPackages[@]}"
