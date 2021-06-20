@@ -1,0 +1,14 @@
+#!/bin/sh
+
+PACKAGES_PATH="/tmp/arcolinux.txt"
+if [ ! -f "${PACKAGES_PATH}" ]; then
+	echo "${PACKAGES_PATH} does not exist!"
+	echo "Exiting..."
+	exit 1
+fi
+
+while read line; do
+	bash "${line}"
+done < "${PACKAGES_PATH}"
+
+exit 0

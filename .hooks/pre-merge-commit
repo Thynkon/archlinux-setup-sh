@@ -1,0 +1,28 @@
+#!/bin/sh
+
+UPSTREAM=${1:-'@{u}'}
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse "$UPSTREAM")
+BASE=$(git merge-base @ "$UPSTREAM")
+
+CURRENT_DIR=$(pwd)
+GIT_REPO_PATH=${CURRENT_DIR%/.git/hooks}
+PACKAGES_PATH="/tmp/arcolinux.txt"
+
+# ref: https://stackoverflow.com/a/3278427
+if [ $LOCAL = $REMOTE ]; then
+	echo "Up-to-date"
+# need to pull
+elif [ $LOCAL = $BASE ]; then
+	# show modified files since last ORIGIN commit
+	modified_files=($(git log --name-only --oneline "${REMOTE}"^..origin/HEAD | grep -Ev '^([0-9a-fA-F]){7}.*' | sort -u))
+
+	[[ -f "${PACKAGES_PATH}" ]] && rm "${PACKAGES_PATH}"
+	for f in "${modified_files}"; do
+		echo "${GIT_REPO_PATH}/${f}" >> "${PACKAGES_PATH}"
+	done
+elif [ $REMOTE = $BASE ]; then
+	echo "Need to push"
+fi
+
+exit 0

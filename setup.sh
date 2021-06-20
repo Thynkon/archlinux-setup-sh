@@ -52,10 +52,7 @@ main() {
 
 	case "${MODE}" in
 		desktop)
-			exclude_list+=(laptop)
-			;;
-		laptop)
-			exclude_list+=(graphics-card)
+			exclude_list+=(battery)
 			;;
 		*)
 			echo "Mode ${mode} does not exist!!!"
@@ -85,7 +82,8 @@ main() {
 
 	file_list=($(find scripts ${find_args} | sort))
 	for f in "${file_list[@]}"; do
-		./${f}
+		echo -e "Executing ${f}\n"
+		./${f} ${mode}
 	done
 }
 
