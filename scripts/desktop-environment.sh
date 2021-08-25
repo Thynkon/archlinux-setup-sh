@@ -34,6 +34,7 @@ archPackages=(
     thunar
     thunar-archive-plugin
     thunar-volman
+    wmname # fix java-based applications display problems
     xfce4-notifyd
     xfce4-power-manager
     xfce4-settings

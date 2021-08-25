@@ -25,8 +25,12 @@ archPackages=(
     mariadb-clients
     maven
     nginx
+    nginx
     nodejs
     npm
+    php
+    php-cgi
+    php-fpm
     python
     python-pip
     ruby
