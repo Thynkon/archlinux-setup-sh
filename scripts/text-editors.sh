@@ -8,12 +8,13 @@ setupNeovim() {
     commandExists nvim
     if [[ $? -eq 0 ]]; then
 	git clone https://github.com/wbthomason/packer.nvim\
-	     ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
+		~/.local/share/nvim/site/pack/packer/opt/packer.nvim
     else
 	echo "neovim is already installed"
     fi
 
     pip3 install --user pynvim
+    nvim +PackerInstall
 }
 export -f setupNeovim
 
@@ -45,21 +46,21 @@ aurPackages=(
     vscodium-bin
 
     # lsp servers
-    lua-language-server-git
+    lua-language-server
     nodejs-intelephense
     sql-language-server
-    vscode-css-languageserver-bin
-    vscode-html-languageserver-bin
     vscode-json-languageserver
 )
 
 archPackages=(
     # lsp servers
     bash-language-server
-    texlab
     gopls
     python-language-server
     rust-analyzer
+    texlab
+    vscode-css-languageserver
+    vscode-html-languageserver
 )
 
 installAurPackages "${aurPackages[@]}"
