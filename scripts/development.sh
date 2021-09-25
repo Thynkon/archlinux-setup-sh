@@ -5,7 +5,9 @@ source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 aurPackages=(
     android-studio
+    git-lfs # store large files using git
     gitahead
+    gitflow-avh # git flow (workflow)
 )
 
 archPackages=(
