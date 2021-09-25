@@ -5,6 +5,8 @@ set -u
 source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 PACMAN_CONF="/etc/pacman.conf"
+CHAOTIC_PUB_KEY="3056513887B78AEB"
+CHAOTIC_KEY_SERVER="keyserver.ubuntu.com"
 
 installAurHelper() {
     local repo_url=""
@@ -27,6 +29,17 @@ installAurHelper() {
     git clone "${repo_url}" . && makepkg -si
 }
 
+enableChaoticRepo() {
+    sudo pacman-key --recv-key "${CHAOTIC_PUB_KEY}" --keyserver "${CHAOTIC_KEY_SERVER}"
+    sudo pacman-key --lsign-key "${CHAOTIC_PUB_KEY}"
+    sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-'{keyring,mirrorlist}'.pkg.tar.zst'
+
+    grep "^[chaotic-aur]$" "${PACMAN_CONF}" || sudo cat <<EOT >> "${PACMAN_CONF}"
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+EOT
+}
+
 enableColors() {
     grep "^#(.*)Color$" "${PACMAN_CONF}" &&
 	# enable pacman and yay colors
@@ -36,6 +49,7 @@ enableColors() {
 main () {
     local archPackages=(
 	base-devel
+	devtools # makechroot
 	pacman-contrib
 	pkgfile # command-not-found
 	reflector # find fastest mirror
@@ -50,6 +64,7 @@ main () {
     sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist
     sudo systemctl enable --now reflector
 
+    enableChaoticRepo
     enableColors
 }
 
