@@ -9,6 +9,8 @@ case "${mode}" in
 	xrandr --output DVI-D-0 --mode 1920x1080  --output HDMI-0 --mode 1920x1080 --primary --left-of DVI-D-0
 	EOM
         ;;
+    laptop)
+        ;;
     *)
         echo "Mode ${mode} does not exist!!!"
         echo "Valid modes: desktop or laptop"

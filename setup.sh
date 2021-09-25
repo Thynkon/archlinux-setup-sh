@@ -54,6 +54,8 @@ main() {
 		desktop)
 			exclude_list+=(battery)
 			;;
+		laptop)
+			;;
 		*)
 			echo "Mode ${mode} does not exist!!!"
 			echo "Valid modes: desktop or laptop"

@@ -29,3 +29,6 @@ archPackages=(
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
+
+# add path to 'font's search path'
+fc-cache -f  ~/local/share/fonts

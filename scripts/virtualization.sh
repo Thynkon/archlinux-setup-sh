@@ -9,9 +9,10 @@ aurPackages=(
 
 archPackages=(
     virtualbox
+    bridge-utils # networking
 )
-
-sudo usermod -aG vboxusers $(whoami)
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
+
+sudo usermod -aG vboxusers $(whoami)

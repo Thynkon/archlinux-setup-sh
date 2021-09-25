@@ -4,13 +4,13 @@
 source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 aurPackages=(
-    suricata-git
 )
 
 archPackages=(
     curl
     inetutils # hostname
     iproute2
+    bind # nslookup
     network-manager-applet
     networkmanager
     nmap
