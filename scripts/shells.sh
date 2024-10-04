@@ -11,7 +11,8 @@ aurPackages=(
 )
 
 archPackages=(
-    zsh
+	sheldon
+	zsh
 )
 
 installAurPackages "${aurPackages[@]}"

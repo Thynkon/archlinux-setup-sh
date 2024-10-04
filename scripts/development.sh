@@ -3,43 +3,62 @@
 
 source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
-aurPackages=(
-    android-studio
-    git-lfs # store large files using git
-    gitahead
-    gitflow-avh # git flow (workflow)
-)
+# @TODO: install asdf and ruby, java, elixir, erlang
 
-archPackages=(
-    android-tools
-    clang
-    cmake
-    composer
-    dbeaver
-    deno
-    gcc
-    go
-    jdk11-openjdk
-    jq
-    luarocks
-    make
-    mariadb
-    mariadb-clients
-    maven
-    nginx
-    nginx
-    nodejs
-    npm
-    php
-    php-cgi
-    php-fpm
-    python
-    python-pip
-    ruby
-    rustup
-    valgrind
-    yarn
-)
+install_elixir() {
+  OTP_VERSION="27"
+  ERLANG_VERSION="${OTP_VERSION}.0.0"
+  ELIXIR_VERSION="1.17.2-otp-${OTP_VERSION}"
 
-installAurPackages "${aurPackages[@]}"
-installArchPackages "${archPackages[@]}"
+  asdf install erlang "${ERLANG_VERSION}"
+  asdf install elixir "${ELIXIR_VERSION}"
+
+  asdf global erlang "${ERLANG_VERSION}"
+  asdf global elixir "${ELIXIR_VERSION}"
+}
+
+# aurPackages=(
+# 	android-studio
+# 	asdf-vm
+# 	gitahead
+# 	zig-dev-bin
+# )
+#
+# archPackages=(
+# glu
+# rebar3
+# inotify-tools
+# webkit2gtk
+# 	android-tools
+# 	clang
+# 	cmake
+# 	cmake
+# 	composer
+# 	dbeaver
+# 	deno
+# 	gcc
+# 	gdb
+# 	github-desktop
+# 	go
+# 	jq
+# 	luarocks
+# 	make
+# 	mariadb
+# 	mariadb-clients
+# 	ninja
+# 	python
+# 	python-pip
+# 	ruby
+# 	rustup
+# 	valgrind
+# 	docker
+# 	docker-buildx
+# fop
+# wxwidgets-common
+# wxwidgets-gtk3
+# )
+#
+# installAurPackages "${aurPackages[@]}"
+# installArchPackages "${archPackages[@]}"
+
+install_elixir

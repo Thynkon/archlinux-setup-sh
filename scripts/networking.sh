@@ -7,14 +7,15 @@ aurPackages=(
 )
 
 archPackages=(
-    curl
-    inetutils # hostname
-    iproute2
-    bind # nslookup
-    network-manager-applet
-    networkmanager
-    nmap
-    wget
+  bind # nslookup
+  curl
+  globalprotect-openconnect
+  inetutils # hostname
+  iproute2
+  network-manager-applet
+  networkmanager
+  nmap
+  wget
 )
 
 installAurPackages "${aurPackages[@]}"
