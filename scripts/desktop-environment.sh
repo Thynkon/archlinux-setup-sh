@@ -2,26 +2,7 @@
 set -e
 # set -x
 
-source "${HOME}/programming/archlinux-setup/lib/lib.sh"
-
-enableTouchPad() {
-  local touchpad_config_file="/usr/share/X11/xorg.conf.d/90-libinput.conf"
-
-  if [[ ! -f "${touchpad_config_file}" || -s "${touchpad_config_file}" ]]; then
-    sudo tee "${touchpad_config_file}" <<EOF
-Section "InputClass"
-    Identifier "libinput touchpad catchall"
-    MatchIsTouchpad "on"
-    MatchDevicePath "/dev/input/event*"
-    Driver "libinput"
-    Option "Tapping" "True"
-    Option "DisableWhileTyping" "True"
-EndSection
-EOF
-  fi
-
-  return 0
-}
+source "$HOME}/programming/archlinux-setup/lib/lib.sh"
 
 setup_hyprland() {
   hyprpm add https://github.com/Duckonaut/split-monitor-workspaces
@@ -30,12 +11,16 @@ setup_hyprland() {
   hyprpm add -v https://github.com/horriblename/hyprgrass
   hyprpm enable hyprgrass
 
+  hyprpm add https://github.com/zakk4223/hyprNStack
+  hyprpm enable hyprNStack
+
   hyprpm reload
 }
 
 aurPackages=(
   safeeyes
-  hyprland-git
+  hyprlauncher
+  swaylock
 )
 
 archPackages=(
@@ -46,6 +31,8 @@ archPackages=(
   glm
   gnome-keyring
   gvfs-mtp # android file transfer
+  hyprland
+  hyprpaper
   hyprwayland-scanner
   lightdm
   lxappearance
@@ -60,6 +47,7 @@ archPackages=(
   tmux
   wezterm
   wmname # fix java-based applications display problems
+  wpaperd
   xclip
   xdg-desktop-portal-hyprland
   xfce4-notifyd
@@ -67,6 +55,7 @@ archPackages=(
   xfce4-settings
   xorg
   yazi
+  zellij
 )
 
 installAurPackages "${aurPackages[@]}"
