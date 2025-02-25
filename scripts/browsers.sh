@@ -5,11 +5,10 @@ source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 aurPackages=(
     brave-bin
+    zen-browser-bin
 )
 
 archPackages=(
-    firefox-developer-edition
-    w3m
 )
 
 installAurPackages "${aurPackages[@]}"

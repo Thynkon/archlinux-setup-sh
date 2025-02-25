@@ -13,52 +13,46 @@ install_elixir() {
   asdf install erlang "${ERLANG_VERSION}"
   asdf install elixir "${ELIXIR_VERSION}"
 
-  asdf global erlang "${ERLANG_VERSION}"
-  asdf global elixir "${ELIXIR_VERSION}"
+  asdf set erlang "${ERLANG_VERSION}"
+  asdf set elixir "${ELIXIR_VERSION}"
 }
 
-# aurPackages=(
-# 	android-studio
-# 	asdf-vm
-# 	gitahead
-# 	zig-dev-bin
-# )
-#
-# archPackages=(
-# glu
-# rebar3
-# inotify-tools
-# webkit2gtk
-# 	android-tools
-# 	clang
-# 	cmake
-# 	cmake
-# 	composer
-# 	dbeaver
-# 	deno
-# 	gcc
-# 	gdb
-# 	github-desktop
-# 	go
-# 	jq
-# 	luarocks
-# 	make
-# 	mariadb
-# 	mariadb-clients
-# 	ninja
-# 	python
-# 	python-pip
-# 	ruby
-# 	rustup
-# 	valgrind
-# 	docker
-# 	docker-buildx
-# fop
-# wxwidgets-common
-# wxwidgets-gtk3
-# )
-#
-# installAurPackages "${aurPackages[@]}"
-# installArchPackages "${archPackages[@]}"
+aurPackages=(
+  asdf-vm
+  # 	gitahead
+  zig-dev-bin
+)
 
-install_elixir
+archPackages=(
+  android-tools
+  clang
+  cmake
+  composer
+  dbeaver
+  docker
+  docker-buildx
+  fop
+  gcc
+  gdb
+  github-desktop
+  glu
+  go
+  inotify-tools
+  jq
+  luarocks
+  make
+  ninja
+  python
+  python-pip
+  rebar3
+  rustup
+  valgrind
+  webkit2gtk
+  wxwidgets-common
+  wxwidgets-gtk3
+)
+
+installAurPackages "${aurPackages[@]}"
+installArchPackages "${archPackages[@]}"
+
+#install_elixir

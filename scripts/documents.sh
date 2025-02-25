@@ -15,6 +15,8 @@ archPackages=(
   zathura
   zathura-pdf-poppler
   poppler
+  sioyek
+  typst
 )
 
 installAurPackages "${aurPackages[@]}"

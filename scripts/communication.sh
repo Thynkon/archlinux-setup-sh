@@ -4,12 +4,13 @@
 source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 aurPackages=(
-    newsflash
 )
 
 archPackages=(
-    element-desktop
-    telegram-desktop
+  webcord
+  element-desktop
+  telegram-desktop
+  signal-desktop
 )
 
 installAurPackages "${aurPackages[@]}"

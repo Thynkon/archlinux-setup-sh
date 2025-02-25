@@ -7,7 +7,7 @@ aurPackages=(
 )
 
 archPackages=(
-    pulseaudio-bluetooth
+    #pulseaudio-bluetooth
     bluez
     bluez-libs
     bluez-utils

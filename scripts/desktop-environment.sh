@@ -2,7 +2,7 @@
 set -e
 # set -x
 
-source "$HOME}/programming/archlinux-setup/lib/lib.sh"
+source "${HOME}/programming/archlinux-setup/lib/lib.sh"
 
 setup_hyprland() {
   hyprpm add https://github.com/Duckonaut/split-monitor-workspaces
@@ -19,7 +19,7 @@ setup_hyprland() {
 
 aurPackages=(
   safeeyes
-  hyprlauncher
+#  hyprlauncher
   swaylock
 )
 
@@ -31,15 +31,14 @@ archPackages=(
   glm
   gnome-keyring
   gvfs-mtp # android file transfer
-  hyprland
-  hyprpaper
-  hyprwayland-scanner
+#  hyprland
+#  hyprpaper
+#  hyprwayland-scanner
   lightdm
   lxappearance
   lxrandr
   network-manager-applet
   numlockx
-  picom
   polkit-gnome
   thunar
   thunar-archive-plugin
@@ -53,30 +52,10 @@ archPackages=(
   xfce4-notifyd
   xfce4-power-manager
   xfce4-settings
-  xorg
   yazi
   zellij
 )
 
 installAurPackages "${aurPackages[@]}"
 installArchPackages "${archPackages[@]}"
-setup_hyprland
-
-#sudo systemctl enable lightdm.service -f
-
-# mode=$1
-# case "${mode}" in
-# desktop)
-# 	# do nothing
-# 	;;
-# laptop)
-# 	enableTouchPad
-# 	;;
-# *)
-# 	echo "Mode ${mode} does not exist!!!"
-# 	echo "Valid modes: desktop or laptop"
-# 	echo "Exiting..."
-#
-# 	exit 1
-# 	;;
-# esac
+#setup_hyprland
